@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
+<root>
+    <sensors>
+        <temperature unit="°C">
+            19.26
+        </temperature>
+        <humidity unit="%">
+            40.00
+        </humidity>
+
+        <openclosedoor>
+            <bedroom id="0" name="Chambre_de_Harry">
+                1
+            </bedroom>
+        </openclosedoor>
+
+        <waterlevel>
+            <cellar unit="%">
+                0.00
+            </cellar>
+        </waterlevel>
+
+    </sensors>
+    <!-- XML Validé le 07/04/2019 13:51 -->
+</root>
