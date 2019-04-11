@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class = "col">
-                <!-- <div id="tempGraph"></div> -->
+<!--                 <div id="tempGraph"></div> -->
                 <canvas id="tempChart"></canvas>
             </div>
             <div class = "col">
