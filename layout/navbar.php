@@ -6,12 +6,29 @@
       
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Chambres</a>
-            </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Chambres</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Salon</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Salle de bain</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Hall</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Garage</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Cuisine</a>
+              </li>
           </ul>
         </div>
 </nav>

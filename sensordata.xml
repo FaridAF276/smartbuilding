@@ -1,25 +1,71 @@
 <?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
 <root>
     <sensors>
-        <temperature unit="°C">
-            19.26
-        </temperature>
-        <humidity unit="%">
-            40.00
-        </humidity>
-
-        <openclosedoor>
-            <bedroom id="0" name="Chambre_de_Harry">
+        <chambre>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+        </chambre>
+        <salon>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+        </salon>
+        <sdb>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <openclosedoor>
                 1
-            </bedroom>
-        </openclosedoor>
-
+            </openclosedoor>
+        </sdb>
+        <hall>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <openclosedoor>
+                1
+            </openclosedoor>
+        </hall>
+        <garag>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <openclosedoor>
+                1
+            </openclosedoor>
+        </garag>
+        <cuisine>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <openclosedoor>
+                1
+            </openclosedoor>
+        </cuisine>
         <waterlevel>
             <cellar unit="%">
                 0.00
             </cellar>
         </waterlevel>
-
     </sensors>
-    <!-- XML Validé le 07/04/2019 13:51 -->
+    <!-- XML Validé le 19/04/2019 09:48 -->
 </root>
