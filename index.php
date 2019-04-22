@@ -18,9 +18,7 @@
       <div class="row">
         <div class ="col"><canvas id="tempChart"></canvas></div>
         <div class ="col"> Hallo</div>
-      </div>
-      
-      
+      </div>    
     </div>
     <!-- <script src="script/tempPlotlyGraphics.js"></script> -->
     <script src="script/graphics.js"></script>

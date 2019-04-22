@@ -14,5 +14,7 @@
 </head>
 <body>
     <?php include ('/smartbuilding/layout/navbar.php')?>
+
+    hallo
 </body>
 </html>
