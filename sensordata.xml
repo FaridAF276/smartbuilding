@@ -3,7 +3,7 @@
     <sensors>
         <chambre>
             <temperature unit="°C">
-                19.26
+                9.26
             </temperature>
             <humidity unit="%">
                 40.00

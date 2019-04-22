@@ -13,15 +13,17 @@ function readXML(){
         let parser = new DOMParser();
         let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
         // console.log(contenuXML);
-        let temperature = contenuXML.getElementsByTagName("temperature");
-        var stringTabTemp=temperature[0].firstChild.data;
-        let tableauTemp = JSON.parse("["+stringTabTemp+"]");
-        let humidity = contenuXML.getElementsByTagName("humidity");
-        var stringTabHumidity=humidity[0].firstChild.data;
-        let tableauHumidity = JSON.parse("["+stringTabHumidity+"]");
+        let chambre = contenuXML.getElementsByTagName("chambre");
+        let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].innerHTML);
+        let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].innerHTML);
+        // var stringTabTemp=temperature[0].firstChild.data;
+        // let tableauTemp = JSON.parse("["+stringTabTemp+"]");
+        // let humidity = contenuXML.getElementsByTagName("humidity");
+        // var stringTabHumidity=humidity[0].firstChild.data;
+        // let tableauHumidity = JSON.parse("["+stringTabHumidity+"]");
         var graphicData = {
-            graphtemperature : tableauTemp,
-            graphhumidity : tableauHumidity
+            graphTemperature : temperature,
+            graphHumidity : humidity
         };
         return graphicData;
         
@@ -30,117 +32,76 @@ function readXML(){
     }
 }
 
+var updateInterval = 1000; //en milliseconde
+var maxPointInChart = 20;
+var updateCount = 0;
+var numberElements = 15;
 var graphData = readXML();
 var chiffreTemp = graphData.graphtemperature;
 var chiffreHumidity = graphData.graphhumidity;
-// var nomVariable = ['Test1', 'Test2', 'Test3'];
+var nomVariable = ['Test1', 'Test2', 'Test3'];
 let charTemp = document.getElementById('tempChart').getContext('2d');
-let charHumidity = document.getElementById('humidityChart').getContext('2d');
-let tempChart = new Chart(charTemp, {
-   type:'line', //bar, horiz bar, pie, line, donut, radar, polarArea
-   data :{
-       labels : [1,2,3,4,5,6,7],
-       datasets : [{
-           label : 'Temparture',
-           data : chiffreTemp,
-           backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-           ],
-           borderWidth :1,
-           borderColor:'#777',
-           hoverBorderWidth : 3,
-           hoverBorderColor : '#000'
-       }],
-   },
-   options : {
-       title : {
-           display : true,
-           text : 'Temperature de la maison',
-           fontSize: 25
-       },
-       legend : {
-           display : true,
-           position : 'right',
-           labels : {
-               fontColor : 'black'
-           }
-       },
-       layout : {
-           padding : {
-               left : 50,
-               right : 0,
-               bottom : 0,
-               top : 0
-           }
-       },
-       tooltips : {
-           enabled : true
-       }
-   }
+// let charHumidity = document.getElementById('humidityChart').getContext('2d');
+var commonOptions = {
+    scales: {
+      xAxes: [{
+        type: 'time',
+        time: {
+          displayFormats: {
+            millisecond: 'mm:ss:SSS'
+          }
+        }
+      }],
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
+        }]
+    },
+    legend: {display: false},
+    tooltips:{
+      enabled: false
+    }
+};
+
+
+let testChart = new Chart(charTemp, {
+    type : 'line',
+    data : {
+        datasets : [{
+            label : 'Test',
+            data : [1],
+        backgroundColor : 'green'
+        }]
+    },
+    options: Object.assign({}, commonOptions, {
+        title:{
+          display: true,
+          text: "Température",
+          fontSize: 18
+        }
+      })
+
 });
 
-let humidityChart = new Chart(charHumidity, {
-    type:'line', //bar, horiz bar, pie, line, donut, radar, polarArea
-    data :{
-        labels : [1,2,3,4,5,6,7],
-        datasets : [{
-            label : 'Temparture',
-            data : chiffreHumidity,
-            backgroundColor:[
-             'rgba(255, 99, 132, 0.6)',
-             'rgba(54, 162, 235, 0.6)',
-             'rgba(255, 206, 86, 0.6)',
-            ],
-            borderWidth :1,
-            borderColor:'#777',
-            hoverBorderWidth : 3,
-            hoverBorderColor : '#000'
-        }],
-    },
-    options : {
-        title : {
-            display : true,
-            text : 'Humidité de la maison',
-            fontSize: 25
-        },
-        legend : {
-            display : true,
-            position : 'right',
-            labels : {
-                fontColor : 'black'
-            }
-        },
-        layout : {
-            padding : {
-                left : 50,
-                right : 0,
-                bottom : 0,
-                top : 0
-            }
-        },
-        tooltips : {
-            enabled : true
-        },
-        scale : {
-            ticks : {
-                suggestedMin : 0
-            }
-        }
+
+
+function addData(data) {
+    if(data){
+      testChart.data.labels.push(new Date());
+    //   console.log(typeof testChart.data.datasets[0].data)
+      testChart.data.datasets[0].data.push(data);
+      if(updateCount > numberElements){
+        testChart.data.labels.shift();
+        testChart.data.datasets[0].data.shift();
+      }
+      else updateCount++;
+      testChart.update();
     }
- });
-var count=0;
-setInterval (function(){
-    count++;
-        console.log("count= "+ count+ " typeof = "+ typeof(count));
-        humidityChart.data.datasets[0].data.push(readXML().graphhumidity);
-        humidityChart.data.labels.push(count);
-        humidityChart.options.scale.ticks.suggestedMin ++;
-    
-        tempChart.data.datasets[0].data.push(readXML().graphtemperature);
-        tempChart.data.labels.push(count);
-        tempChart.options.scale.ticks.suggestedMin ++;
-}, 500);
-
-
+  };
+  function updateData() {
+    console.log("Update Data");
+    addData(readXML().graphTemperature);
+    setTimeout(updateData,updateInterval);
+  }
+  updateData();
