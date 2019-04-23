@@ -34,7 +34,7 @@ var chiffreTemp = graphData.graphtemperature;
 var chiffreHumidity = graphData.graphhumidity;
 var nomVariable = ['Test1', 'Test2', 'Test3'];
 let charTemp = document.getElementById('tempChart').getContext('2d');
-// let charHumidity = document.getElementById('humidityChart').getContext('2d');
+let charHumidity = document.getElementById('humidityChart').getContext('2d');
 var commonOptions = {
     scales: {
       xAxes: [{
@@ -77,24 +77,47 @@ let tempChart = new Chart(charTemp, {
 
 });
 
-
+let humidChart = new Chart(charHumidity, {
+  type : 'line',
+  data : {
+      datasets : [{
+          label : 'Test',
+          data : [1],
+          pointBackgroundColor : 'green'
+      }]
+  },
+  options: Object.assign({}, commonOptions, {
+      title:{
+        display: true,
+        text: "Humidité",
+        fontSize: 18
+      }
+    })
+});
 
 function addData(data) {
     if(data){
       tempChart.data.labels.push(new Date());
+      humidChart.data.labels.push(new Date());
     //   console.log(typeof testChart.data.datasets[0].data)
-      tempChart.data.datasets[0].data.push(data);
+      tempChart.data.datasets[0].data.push(data.graphTemperature);
+      humidChart.data.datasets[0].data.push(data.graphHumidity);
       if(updateCount > numberElements){
+        //t
         tempChart.data.labels.shift();
         tempChart.data.datasets[0].data.shift();
+        //%
+        humidChart.data.labels.shift();
+        humidChart.data.datasets[0].data.shift();
       }
       else updateCount++;
       tempChart.update();
+      humidChart.update();
     }
   };
   function updateData() {
     console.log("Update Data");
-    addData(readXML().graphTemperature);
+    addData(readXML());
     setTimeout(updateData,updateInterval);
   }
   updateData();

@@ -19,7 +19,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class ="col"><canvas id="tempChart"></canvas></div>
-        <!-- <div class ="col"> <?php echo rootname?> </div> -->
+        <div class="col">
+          <canvas id="humidityChart"></canvas>
+        </div>
       </div>    
     </div>
     <!-- <script src="script/tempPlotlyGraphics.js"></script> -->
