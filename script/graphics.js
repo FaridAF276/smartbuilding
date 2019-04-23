@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/smartbuilding/sensordata.xml",false);
+        xmlData.open('GET', "/html/sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -9,18 +9,11 @@ function readXML(){
         }
         xmlData.send();
         var xmlResponse = xmlData.responseText;
-        // console.log(xmlResponse);
         let parser = new DOMParser();
         let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
-        // console.log(contenuXML);
         let chambre = contenuXML.getElementsByTagName("chambre");
         let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].innerHTML);
         let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].innerHTML);
-        // var stringTabTemp=temperature[0].firstChild.data;
-        // let tableauTemp = JSON.parse("["+stringTabTemp+"]");
-        // let humidity = contenuXML.getElementsByTagName("humidity");
-        // var stringTabHumidity=humidity[0].firstChild.data;
-        // let tableauHumidity = JSON.parse("["+stringTabHumidity+"]");
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity
@@ -65,13 +58,13 @@ var commonOptions = {
 };
 
 
-let testChart = new Chart(charTemp, {
+let tempChart = new Chart(charTemp, {
     type : 'line',
     data : {
         datasets : [{
             label : 'Test',
             data : [1],
-        backgroundColor : 'green'
+            pointBackgroundColor : 'green'
         }]
     },
     options: Object.assign({}, commonOptions, {
@@ -88,15 +81,15 @@ let testChart = new Chart(charTemp, {
 
 function addData(data) {
     if(data){
-      testChart.data.labels.push(new Date());
+      tempChart.data.labels.push(new Date());
     //   console.log(typeof testChart.data.datasets[0].data)
-      testChart.data.datasets[0].data.push(data);
+      tempChart.data.datasets[0].data.push(data);
       if(updateCount > numberElements){
-        testChart.data.labels.shift();
-        testChart.data.datasets[0].data.shift();
+        tempChart.data.labels.shift();
+        tempChart.data.datasets[0].data.shift();
       }
       else updateCount++;
-      testChart.update();
+      tempChart.update();
     }
   };
   function updateData() {

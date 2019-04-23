@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta Cache-Control="no-cache"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SmartBuilding Chart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +14,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 </head>
 <body>
-    <?php include ('layout/navbar.php')?>
+    <?php include ('layout/navbar.php');
+    ?>
     <div class="container-fluid">
       <div class="row">
         <div class ="col"><canvas id="tempChart"></canvas></div>
-        <div class ="col"> Hallo</div>
+        <!-- <div class ="col"> <?php echo rootname?> </div> -->
       </div>    
     </div>
     <!-- <script src="script/tempPlotlyGraphics.js"></script> -->

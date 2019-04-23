@@ -7,27 +7,27 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                  <a class="nav-link" href="/index.php">Acceuil <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/html/index.php">Acceuil <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/chambre.php">Chambres</a>
-              </li>
-
-              <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/salon.php">Salon</a>
+                  <a class="nav-link" href="/html/pages/chambre.php">Chambres</a>
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/sdb.php">Salle de bain</a>
+                  <a class="nav-link" href="/html/pages/salon.php">Salon</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="/html/pages/sdb.php">Salle de bain</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/hall.php">Hall</a>
+                  <a class="nav-link" href="/html/pages/hall.php">Hall</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/garage.php">Garage</a>
+                  <a class="nav-link" href="/html/pages/garage.php">Garage</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/smartbuilding/pages/cuisine.php">Cuisine</a>
+                  <a class="nav-link" href="/html/pages/cuisine.php">Cuisine</a>
               </li>
           </ul>
         </div>
