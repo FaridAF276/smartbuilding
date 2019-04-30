@@ -14,5 +14,9 @@
 </head>
 <body>
     <?php include ('../layout/navbar.php')?>
+    <div>
+        <button id="ventilHumidity"></button>
+        <button id="floodAlert"></button>
+    </div>
 </body>
 </html>

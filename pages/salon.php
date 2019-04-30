@@ -14,5 +14,9 @@
 </head>
 <body>
     <?php include ('../layout/navbar.php')?>
+    <!-- Graphiques de l'humidité et température -->
+    <div>
+        <button id="brightness"></button>
+    </div>
 </body>
 </html>

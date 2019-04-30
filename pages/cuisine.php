@@ -14,5 +14,9 @@
 </head>
 <body>
     <?php include ('../layout/navbar.php')?>
+    <!-- Graph température -->
+    <div>
+        <button id="peopleInKitchen"></button>
+    </div>
 </body>
 </html>

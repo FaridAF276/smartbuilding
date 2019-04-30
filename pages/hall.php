@@ -14,5 +14,9 @@
 </head>
 <body>
     <?php include ('../layout/navbar.php')?>
+    <div>
+        <button id="mail"></button>
+        <button id="peopleInRoom"></button>
+    </div>
 </body>
 </html>

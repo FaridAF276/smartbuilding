@@ -14,5 +14,8 @@
 </head>
 <body>
     <?php include ('../layout/navbar.php')?>
+    <div>
+        <button id="openGarage">Chargement...</button>
+    </div>
 </body>
 </html>

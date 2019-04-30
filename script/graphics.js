@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "/html/sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -14,12 +14,13 @@ function readXML(){
         let chambre = contenuXML.getElementsByTagName("chambre");
         let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].innerHTML);
         let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].innerHTML);
+        let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].innerHTML);
         var graphicData = {
             graphTemperature : temperature,
-            graphHumidity : humidity
+            graphHumidity : humidity,
+            doorBool : door
         };
         return graphicData;
-        
     } catch (error) {
         console.log("Erreur détectée : " + error.stack)
     }
@@ -56,7 +57,6 @@ var commonOptions = {
       enabled: false
     }
 };
-
 
 let tempChart = new Chart(charTemp, {
     type : 'line',
@@ -95,6 +95,18 @@ let humidChart = new Chart(charHumidity, {
     })
 });
 
+function updateDoor(data){
+  let temoinPorte = document.getElementById("temoinPorte");
+  console.log(temoinPorte);
+  if (data.doorBool) {
+    temoinPorte.innerHTML = "Ouverte";
+    temoinPorte.className = "btn btn-success";
+  }else{
+    temoinPorte.innerHTML = "Fermée";
+    temoinPorte.className = "btn btn-danger";
+  }
+}
+
 function addData(data) {
     if(data){
       tempChart.data.labels.push(new Date());
@@ -115,9 +127,17 @@ function addData(data) {
       humidChart.update();
     }
   };
-  function updateData() {
+function updateData() {
+    if(!location.hash){
+      location.hash = "#reloading";
+      location.reload(true);
+    }else{
+      location.hash="#reloaded";
+    }
     console.log("Update Data");
-    addData(readXML());
+    let fichier = readXML();
+    addData(fichier);
+    updateDoor(fichier);
     setTimeout(updateData,updateInterval);
   }
   updateData();
