@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b94bdd8-d4f8-4174-90a3-121f5b9b9002" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/chambre.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/chambre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cuisine.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cuisine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/garage.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/garage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hall.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/salon.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/salon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/graphics.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/graphics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/humidPlotlyGraphics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/tempPlotlyGraphics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/windowscontrol.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensordata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sensordata.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +25,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+                <state relative-caret-position="32">
+                  <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -47,8 +34,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/script/graphics.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1888">
-                  <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
+                <state relative-caret-position="363">
+                  <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -56,8 +43,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/chambre.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+                <state relative-caret-position="256">
+                  <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -111,8 +98,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/script/chambre.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+                <state relative-caret-position="331">
+                  <caret line="99" column="27" lean-forward="true" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
                   <folding>
                     <element signature="n#!!block;n#readXML#0" />
                   </folding>
@@ -225,7 +212,7 @@
       <workItem from="1555659418939" duration="945000" />
       <workItem from="1555661881466" duration="1213000" />
       <workItem from="1556568651189" duration="3403000" />
-      <workItem from="1556638579500" duration="10000" />
+      <workItem from="1556638579500" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="2e commit juste pour test">
       <created>1554990200612</created>
@@ -241,11 +228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555660144371</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2e commit juste pour test">
+      <created>1556638627964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556638627964</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8125000" />
+    <option name="totallyTimeSpent" value="10241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -268,7 +262,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -307,20 +301,6 @@
     <entry file="file://$PROJECT_DIR$/pages/salon.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/graphics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1888">
-          <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/cuisine.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -329,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/hall.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        <state relative-caret-position="288">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -344,20 +324,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/chambre.js">
+    <entry file="file://$PROJECT_DIR$/script/graphics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!block;n#readXML#0" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/chambre.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        <state relative-caret-position="256">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/chambre.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="99" column="27" lean-forward="true" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!block;n#readXML#0" />
+          </folding>
         </state>
       </provider>
     </entry>
