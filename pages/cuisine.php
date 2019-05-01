@@ -29,7 +29,6 @@
         </div>
         <div class="row">
             <div class="col"><button class="btn btn-info" id="presence">Chargement...</button></div>
-            <div class="col"><button class="btn btn-info" id="window">Chargement...</button></div>
         </div>
     </div>
     <script src = '../script/cuisine.js'></script>

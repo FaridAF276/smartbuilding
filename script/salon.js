@@ -15,10 +15,14 @@ function readXML(){
         let temp = parseFloat(salon[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(salon[0].getElementsByTagName("humidity")[0].textContent);
         let extBrightness = salon[0].getElementsByTagName("extBrightness")[0].textContent.replace(/\s/g,'');
+        let rain = parseInt(salon[0].getElementsByTagName("rainDetect")[0].textContent);
+        let openCloseW =parseInt(salon[0].getElementsByTagName("opencloseWindow")[0].textContent);
         var graphicData = {
             graphTemperature : temp,
             graphHumidity : humidity,
-            brightness : extBrightness
+            brightness : extBrightness,
+            rain : rain,
+            openCloseWindow : openCloseW
         };
         return graphicData;
     } catch (error) {
@@ -103,9 +107,37 @@ try{
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
                 + "\n type : " + typeof data.brightness.toLowerCase());
-        }console.log("Erreur dans l'acquisition des données...");
+        }
         }
 
+    function updateWindow(data){
+        let windowBtn = document.getElementById('window');
+        if (data.openCloseWindow){
+            windowBtn.innerHTML="Fenêtre Ouverte";
+            windowBtn.className="btn btn-warning btn-lg";
+        } else if(data.openCloseWindow==0){
+            windowBtn.innerHTML="Fenêtre fermée";
+            windowBtn.className = "btn btn-success btn-lg";
+        }else{
+            console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.openCloseWindow
+                + "\n type : " + typeof data.openCloseWindow);
+        }
+
+    }
+
+    function updateRain(data){
+        let rainBtn = document.getElementById('rain');
+        if (data.rain){
+            rainBtn.innerHTML="Pluie détectée";
+            rainBtn.className="btn btn-warning btn-lg";
+        } else if(data.rain==0){
+            rainBtn.innerHTML="Temps sec....";
+            rainBtn.className = "btn btn-success btn-lg";
+        }else{
+            console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.rain
+                + "\n type : " + typeof data.rain);
+        }
+    }
     function addData(data) {
         if(data){
             tempChart.data.labels.push(new Date());
@@ -131,6 +163,8 @@ try{
         let fichier = readXML();
         addData(fichier);
         updateBrightness(fichier);
+        updateRain(fichier);
+        updateWindow(fichier);
         setTimeout(updateData,updateInterval);
     }
     updateData();

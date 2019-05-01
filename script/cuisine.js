@@ -104,18 +104,6 @@ try{
             console.log("Erreur dans l'acquisition des données...");
         }
     }
-    function updateWindow(data){
-        let windowBtn = document.getElementById('window');
-        if (data.windBool){
-            windowBtn.innerHTML="Fenêtre Ouverte";
-            windowBtn.className="btn btn-warning btn-lg";
-        } else if(data.windBool==0){
-            windowBtn.innerHTML="Fenêtre fermée";
-            windowBtn.className = "btn btn-success btn-lg";
-        }else{
-            console.log("Erreur dans l'acquisition des données...");
-        }
-    }
 
     function addData(data) {
         if(data){
@@ -141,7 +129,6 @@ try{
         console.log("Update Data");
         let fichier = readXML();
         addData(fichier);
-        updateWindow(fichier);
         updatePresence(fichier);
         setTimeout(updateData,updateInterval);
     }
