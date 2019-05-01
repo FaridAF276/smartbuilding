@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b94bdd8-d4f8-4174-90a3-121f5b9b9002" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8b94bdd8-d4f8-4174-90a3-121f5b9b9002" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/chambre.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="176">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -260,7 +258,7 @@
       <workItem from="1556638579500" duration="8291000" />
       <workItem from="1556712237251" duration="4644000" />
       <workItem from="1556724907066" duration="2241000" />
-      <workItem from="1556728447396" duration="276000" />
+      <workItem from="1556728447396" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="2e commit juste pour test">
       <created>1554990200612</created>
@@ -304,11 +302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556727139066</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ensemble des erreur solutionnées">
+      <created>1556728750598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556728750598</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23567000" />
+    <option name="totallyTimeSpent" value="23633000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +326,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39339018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -361,7 +365,8 @@
     <MESSAGE value="2e commit juste pour test" />
     <MESSAGE value="Deux graph pour chambre" />
     <MESSAGE value="Tout functionnel sauf lecture string" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tout functionnel sauf lecture string" />
+    <MESSAGE value="ensemble des erreur solutionnées" />
+    <option name="LAST_COMMIT_MESSAGE" value="ensemble des erreur solutionnées" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/script/humidPlotlyGraphics.js" />
@@ -429,8 +434,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script/chambre.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="176">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
