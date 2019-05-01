@@ -35,6 +35,12 @@
             <div class="col">
                 <button class="btn btn-info" id="rain">Chargement...</button>
             </div>
+            <div class="col">
+                <div id="tresholdTemp"></div>
+            </div>
+            <div class="col">
+                <div id="tresholdHum"></div>
+            </div>
 
         </div>
     </div>

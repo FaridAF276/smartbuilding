@@ -12,6 +12,8 @@ function readXML(){
         let parser = new DOMParser();
         let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
         let chambre = contenuXML.getElementsByTagName("chambre");
+        let tSeuil = parseInt(chambre[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(chambre[0].getElementsByTagName("humdSeuil")[0].textContent);
         let temperature = parseFloat(chambre[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(chambre[0].getElementsByTagName("humidity")[0].textContent);
         let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].textContent);
@@ -22,6 +24,8 @@ function readXML(){
             graphHumidity : humidity,
             doorBool : door,
             rain : rain,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             brightness : brightnesstTxt
         };
         return graphicData;
@@ -137,6 +141,18 @@ try{
         updateBrightness(fichier);
         setTimeout(updateData,updateInterval);
     }
+    function initializeTemp(data){
+        let tresholdTempDiv = document.getElementById('tresholdTemp');
+        let tresholdHumDiv = document.getElementById('tresholdHum');
+        tresholdHumDiv.innerHTML = data.tresholdHum.toString();
+        tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+        let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
+        let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
+        tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+        tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+
+    }
+    initializeTemp(readXML());
     updateData();
 }
 catch (error) {

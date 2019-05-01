@@ -14,12 +14,16 @@ function readXML(){
         let cuisine = contenuXML.getElementsByTagName("cuisine");
         let temperature = parseFloat(cuisine[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(cuisine[0].getElementsByTagName("humidity")[0].textContent);
+        let tSeuil = parseInt(cuisine[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(cuisine[0].getElementsByTagName("humdSeuil")[0].textContent);
         let windows = parseInt(cuisine[0].getElementsByTagName("opencloseWindow")[0].textContent);
         let presence = parseInt(cuisine[0].getElementsByTagName("presenceDetection")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
             windBool : windows,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             presence : presence
         };
         return graphicData;
@@ -132,6 +136,18 @@ try{
         updatePresence(fichier);
         setTimeout(updateData,updateInterval);
     }
+    function initializeTemp(data){
+        let tresholdTempDiv = document.getElementById('tresholdTemp');
+        let tresholdHumDiv = document.getElementById('tresholdHum');
+        tresholdHumDiv.innerHTML = data.tresholdHum.toString();
+        tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+        let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
+        let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
+        tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+        tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+
+    }
+    initializeTemp(readXML());
     updateData();
 }
 catch (error) {

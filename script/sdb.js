@@ -15,9 +15,13 @@ function readXML(){
         let temperature = parseFloat(sdb[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(sdb[0].getElementsByTagName("humidity")[0].textContent);
         let flood = parseInt(sdb[0].getElementsByTagName("floodDetection")[0].textContent);
+        let tSeuil = parseInt(sdb[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(sdb[0].getElementsByTagName("humdSeuil")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             floodDetection : flood
         };
         return graphicData;
@@ -128,6 +132,18 @@ try{
             updateFlood(fichier);
             setTimeout(updateData,updateInterval);
         }
+        function initializeTemp(data){
+            let tresholdTempDiv = document.getElementById('tresholdTemp');
+            let tresholdHumDiv = document.getElementById('tresholdHum');
+            tresholdHumDiv.innerHTML = data.tresholdHum.toString();
+            tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+            let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
+            let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
+            tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+            tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+
+        }
+        initializeTemp(readXML());
         updateData();
 } catch (error) {
     console.log("Erreur détectée : " + error.stack);

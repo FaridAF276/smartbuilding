@@ -17,6 +17,12 @@
             <extBrightness>
                 jaune
             </extBrightness>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </chambre>
         <salon>
             <temperature unit="°C">
@@ -34,6 +40,12 @@
             <extBrightness>
                 rouge
             </extBrightness>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </salon>
         <sdb>
             <temperature unit="°C">
@@ -45,6 +57,12 @@
             <floodDetection>
                 0
             </floodDetection>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </sdb>
         <hall>
             <temperature unit="°C">
@@ -62,6 +80,12 @@
             <openclosedoor>
                 1
             </openclosedoor>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </hall>
         <garage>
             <temperature unit="°C">
@@ -79,6 +103,12 @@
             <tank>
                 75
             </tank>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </garage>
         <cuisine>
             <temperature unit="°C">
@@ -94,6 +124,12 @@
                 0
             <!--boolean-->
             </presenceDetection>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
         </cuisine>
     </sensors>
     <!-- XML Validé le 29/04/2019 22:20 -->
