@@ -27,6 +27,10 @@
                 <canvas id="humidityChart"></canvas>
             </div>
         </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-info" id="rain">Chargement...</button></div>
+            <div class="col"><button class="btn btn-info" id="brightness">Chargement...</button></div>
+        </div>
     </div>
     <script src = '../script/chambre.js'></script>
 </body>

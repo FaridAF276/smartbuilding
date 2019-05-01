@@ -100,10 +100,10 @@ function updateDoor(data){
   console.log(temoinPorte);
   if (data.doorBool) {
     temoinPorte.innerHTML = "Ouverte";
-    temoinPorte.className = "btn btn-success";
+    temoinPorte.className = "btn btn-success btn-lg";
   }else{
     temoinPorte.innerHTML = "Fermée";
-    temoinPorte.className = "btn btn-danger";
+    temoinPorte.className = "btn btn-danger btn-lg";
   }
 }
 

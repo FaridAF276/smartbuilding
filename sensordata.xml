@@ -12,10 +12,10 @@
                 1
             </openclosedoor>
             <rainDetect>
-                1
+                0
             </rainDetect>
             <extBrightness>
-                0
+                rouge
             </extBrightness>
         </chambre>
         <salon>
@@ -26,12 +26,12 @@
                 40.00
             </humidity>
             <extBrightness>
-
+                rouge
             </extBrightness>
         </salon>
         <sdb>
             <temperature unit="°C">
-                19.26
+                9.5
             </temperature>
             <humidity unit="%">
                 40.00
@@ -48,13 +48,13 @@
                 40.00
             </humidity>
             <mail>
-                0
+                1
             </mail>
             <peopleInHall>
-                1
+                75
             </peopleInHall>
             <openclosedoor>
-                0
+                1
             </openclosedoor>
         </hall>
         <garage>
@@ -71,7 +71,7 @@
                 3.00
             </carDistance>
             <tank>
-                0
+                75
             </tank>
         </garage>
         <cuisine>
@@ -82,10 +82,10 @@
                 40.00
             </humidity>
             <opencloseWindow>
-
+                1
             </opencloseWindow>
             <presenceDetection>
-                1
+                0
             <!--boolean-->
             </presenceDetection>
         </cuisine>
