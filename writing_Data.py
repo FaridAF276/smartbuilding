@@ -18,7 +18,7 @@ def on_message(client, userdata, msg):
         base_path = os.path.dirname(os.path.realpath(__file__))
         #print(base_path)
 
-        xml_file = os.path.join(base_path, "data/sensordata.xml")
+        xml_file = os.path.join(base_path, "sensordata.xml")
 
         tree = et.parse(xml_file)
         root = tree.getroot()
