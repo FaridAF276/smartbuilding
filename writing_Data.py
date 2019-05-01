@@ -13,27 +13,25 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print("Message recu "+msg.topic+" "+str(msg.payload))
 
+    base_path = os.path.dirname(os.path.realpath(__file__))
+    # print(base_path)
+
+    xml_file = os.path.join(base_path, "sensordata.xml")
+
+    tree = et.parse(xml_file)
+    root = tree.getroot()
     if msg.topic == "chambre/potentiometre":
         print("Dans le potentiometre dans le sujet chambre")
-        base_path = os.path.dirname(os.path.realpath(__file__))
-        #print(base_path)
-
-        xml_file = os.path.join(base_path, "sensordata.xml")
-
-        tree = et.parse(xml_file)
-        root = tree.getroot()
 
         for child in root.iter('sensors'):
             for sec in child.iter('chambre'):
-            #print(sec.tag)
-
                 for temperature in sec.iter('resistance'):
-                        new_temp = str(msg.payload)
-                        temperature.text = new_temp
+                        new_res = str(msg.payload)
+                        temperature.text = new_res
                         # print("On ecrit dans le fichier")
         tree.write(xml_file)
 
-        # print("Nouveau fichier xml")
+        print("Nouveau fichier xml")
         for child in root:
             for sec in child.iter('chambre'):
             # print(sec.tag, sec.attrib)
@@ -43,58 +41,40 @@ def on_message(client, userdata, msg):
 
     if msg.topic == "sdb/temperature":
         print("Dans le potentiometre dans le sujet sdb")
-        base_path = os.path.dirname(os.path.realpath(__file__))
-        #print(base_path)
-
-        xml_file = os.path.join(base_path, "data/sensordata.xml")
-
-        tree = et.parse(xml_file)
-        root = tree.getroot()
 
         for child in root.iter('sensors'):
             for sec in child.iter('sdb'):
-            #print(sec.tag)
-
                 for temperature in sec.iter('temperature'):
-                        new_temp = str(msg.payload)
-                        temperature.text = new_temp
-                        # print("On ecrit dans le fichier")
+                    new_temp = str(msg.payload)
+                    temperature.text = new_temp
+                    # print("On ecrit dans le fichier")
+
         tree.write(xml_file)
+        print("Nouveau fichier xml")
 
-        # print("Nouveau fichier xml")
-        for child in root:
-            for sec in child.iter('chambre'):
-            # print(sec.tag, sec.attrib)
-                for element in sec.iter('resistance'):
-                    print("Dans le nouveau fichier xml "+ element.tag + " : "+ " : "+ element.text)
-
+        for child in root.iter('sensors'):
+            for sec in child.iter('sdb'):
+                for element in sec.iter('temperature'):
+                    print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
 
     if msg.topic == "sdb/humidity":
-        print("Dans le potentiometre dans le sujet sdb")
-        base_path = os.path.dirname(os.path.realpath(__file__))
-        #print(base_path)
-
-        xml_file = os.path.join(base_path, "data/sensordata.xml")
-
-        tree = et.parse(xml_file)
-        root = tree.getroot()
+        print("Dans l'humidite dans le sujet sdb")
 
         for child in root.iter('sensors'):
             for sec in child.iter('sdb'):
-            #print(sec.tag)
-
                 for humidite in sec.iter('humidity'):
-                        new_hum = str(msg.payload)
-                        humidite.text = new_hum
-                        # print("On ecrit dans le fichier")
-        tree.write(xml_file)
+                    new_hum = str(msg.payload)
+                    humidite.text = new_hum
+                    # print("On ecrit dans le fichier")
 
-        # print("Nouveau fichier xml")
-        for child in root:
+        tree.write(xml_file)
+        print("Nouveau fichier xml")
+
+        for child in root.iter('sensors'):
             for sec in child.iter('sdb'):
-            # print(sec.tag, sec.attrib)
                 for element in sec.iter('humidity'):
-                    print("Dans le nouveau fichier xml "+ element.tag + " : "+ " : "+ element.text)
+                    print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
+
 
 client = mqtt.Client()
 print("Hello")
