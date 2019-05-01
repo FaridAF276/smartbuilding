@@ -93,19 +93,6 @@ try{
             }
         })
     });
-
-    function updateRain(data){
-        let rainBtn = document.getElementById('rain');
-        if (data.rain){
-            rainBtn.innerHTML="Pluie détectée";
-            rainBtn.className="btn btn-warning btn-lg";
-        } else if(data.rain==0){
-            rainBtn.innerHTML="Temps sec....";
-            rainBtn.className = "btn btn-success btn-lg";
-        }else{
-            console.log("Erreur dans l'acquisition des données...");
-        }
-    }
     function updateBrightness (data){
         let brightnessBtn = document.getElementById('brightness');
         if(data.brightness.toLowerCase() == "rouge"){
@@ -147,7 +134,6 @@ try{
         console.log("Update Data");
         let fichier = readXML();
         addData(fichier);
-        updateRain(fichier);
         updateBrightness(fichier);
         setTimeout(updateData,updateInterval);
     }

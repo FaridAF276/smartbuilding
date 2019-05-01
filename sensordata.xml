@@ -25,6 +25,12 @@
             <humidity unit="%">
                 40.00
             </humidity>
+            <opencloseWindow>
+                1
+            </opencloseWindow>
+            <rainDetect>
+                0
+            </rainDetect>
             <extBrightness>
                 rouge
             </extBrightness>
