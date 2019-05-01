@@ -7,7 +7,7 @@ def on_connect(client, userdata, flags, rc):
     # Subscribing in on_connect() - if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe("chambre/potentiometre")
-    client.subscribe("sdb/temperature")
+    client.subscribe("sdb/waterlevel")
     client.subscribe("sdb/humidity")
 
 def on_message(client, userdata, msg):
@@ -39,14 +39,14 @@ def on_message(client, userdata, msg):
                     print("Dans le nouveau fichier xml "+ element.tag + " : "+ " : "+ element.text)
 
 
-    if msg.topic == "sdb/temperature":
+    if msg.topic == "sdb/waterlevel":
         print("Dans le potentiometre dans le sujet sdb")
 
         for child in root.iter('sensors'):
             for sec in child.iter('sdb'):
-                for temperature in sec.iter('temperature'):
-                    new_temp = str(msg.payload)
-                    temperature.text = new_temp
+                for waterlvl in sec.iter('floodDetection'):
+                    new_water = str(msg.payload)
+                    waterlvl.text = new_water
                     # print("On ecrit dans le fichier")
 
         tree.write(xml_file)
@@ -54,7 +54,7 @@ def on_message(client, userdata, msg):
 
         for child in root.iter('sensors'):
             for sec in child.iter('sdb'):
-                for element in sec.iter('temperature'):
+                for element in sec.iter('floodDetection'):
                     print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
 
     if msg.topic == "sdb/humidity":
