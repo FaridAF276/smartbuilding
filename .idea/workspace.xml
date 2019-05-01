@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b94bdd8-d4f8-4174-90a3-121f5b9b9002" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/chambre.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/chambre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cuisine.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cuisine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/garage.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/garage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hall.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/salon.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/salon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/graphics.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/graphics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sensordata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sensordata.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,97 +19,104 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="16">
-                  <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/sensordata.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/cuisine.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
-                  <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/script/cuisine.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/script/hall.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1616">
-                  <caret line="101" column="27" selection-end-line="158" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/script/cuisine.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#1629#2091#0" />
-                    <element signature="e#2139#2536#0" />
-                    <element signature="e#2579#2979#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/script/chambre.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="152" column="14" lean-forward="true" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#3105#3527#0" />
-                    <element signature="e#3564#4342#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/chambre.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script/chambre.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sensordata.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/cuisine.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/garage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/gauge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/hall.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/salon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/sdb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/graphics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="843">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,7 +132,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/layout/navbar.php" />
         <option value="$PROJECT_DIR$/pages/chambre.html" />
         <option value="$PROJECT_DIR$/pages/cuisine.html" />
         <option value="$PROJECT_DIR$/pages/salon.html" />
@@ -141,17 +141,19 @@
         <option value="$PROJECT_DIR$/pages/chambre.php" />
         <option value="$PROJECT_DIR$/script/graphics.js" />
         <option value="$PROJECT_DIR$/pages/sdb.php" />
-        <option value="$PROJECT_DIR$/script/sdb.js" />
         <option value="$PROJECT_DIR$/pages/salon.php" />
-        <option value="$PROJECT_DIR$/script/salon.js" />
         <option value="$PROJECT_DIR$/pages/garage.php" />
-        <option value="$PROJECT_DIR$/script/garage.js" />
         <option value="$PROJECT_DIR$/pages/hall.php" />
-        <option value="$PROJECT_DIR$/script/hall.js" />
         <option value="$PROJECT_DIR$/pages/cuisine.php" />
+        <option value="$PROJECT_DIR$/sensordata.xml" />
+        <option value="$PROJECT_DIR$/layout/navbar.php" />
+        <option value="$PROJECT_DIR$/script/sdb.js" />
+        <option value="$PROJECT_DIR$/script/salon.js" />
+        <option value="$PROJECT_DIR$/script/hall.js" />
+        <option value="$PROJECT_DIR$/script/gauge.js" />
+        <option value="$PROJECT_DIR$/script/garage.js" />
         <option value="$PROJECT_DIR$/script/cuisine.js" />
         <option value="$PROJECT_DIR$/script/chambre.js" />
-        <option value="$PROJECT_DIR$/sensordata.xml" />
       </list>
     </option>
   </component>
@@ -180,6 +182,11 @@
             <path>
               <item name="html" type="b2602c69:ProjectViewProjectNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="html" type="b2602c69:ProjectViewProjectNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="html" type="b2602c69:ProjectViewProjectNode" />
@@ -254,7 +261,7 @@
       <workItem from="1556568651189" duration="3403000" />
       <workItem from="1556638579500" duration="8291000" />
       <workItem from="1556712237251" duration="4644000" />
-      <workItem from="1556724907066" duration="763000" />
+      <workItem from="1556724907066" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="2e commit juste pour test">
       <created>1554990200612</created>
@@ -284,11 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556640736038</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tout functionnel sauf lecture string">
+      <created>1556725711506</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556725711507</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21813000" />
+    <option name="totallyTimeSpent" value="23256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,10 +314,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3894967" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3891258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -340,7 +354,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2e commit juste pour test" />
     <MESSAGE value="Deux graph pour chambre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deux graph pour chambre" />
+    <MESSAGE value="Tout functionnel sauf lecture string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tout functionnel sauf lecture string" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/script/humidPlotlyGraphics.js" />
@@ -348,51 +363,12 @@
     <entry file="file://$PROJECT_DIR$/pages/garage.html" />
     <entry file="file://$PROJECT_DIR$/pages/sdb.html" />
     <entry file="file://$PROJECT_DIR$/pages/salon.html" />
-    <entry file="file://$PROJECT_DIR$/layout/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/cuisine.html" />
     <entry file="file://$PROJECT_DIR$/pages/hall.html" />
-    <entry file="file://$PROJECT_DIR$/script/graphics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/sdb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="112" column="46" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/salon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="133" column="19" lean-forward="true" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
-          <folding>
-            <element signature="e#1912#2309#0" />
-            <element signature="e#2352#2752#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/garage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/garage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
         </state>
       </provider>
     </entry>
@@ -417,10 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/hall.js">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1616">
-          <caret line="101" column="27" selection-end-line="158" selection-end-column="1" />
+        <state relative-caret-position="16">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -431,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/cuisine.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -445,28 +414,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sensordata.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="4796" column="4" selection-start-line="4796" selection-start-column="4" selection-end-line="4796" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/graphics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/sdb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/salon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/hall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/gauge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/garage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/script/cuisine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="43">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/chambre.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="152" column="14" lean-forward="true" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-          <folding>
-            <element signature="e#3105#3527#0" />
-            <element signature="e#3564#4342#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sensordata.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="48">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
