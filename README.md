@@ -19,3 +19,18 @@ Here you adapt the directory to the file name that you choose for example, the d
 
 After you have modified this the application should run.
 
+
+
+## Dependencies for this project.
+
+This web application uses : 
+* Bootstrap
+* Chart.js
+* jQuery
+You need these to be installed in your computer and adapt the script tags in every .php file of the project if you want to execute this application off-line. 
+ 
+ ## How does the script work
+
+ To generate any of the chart or button we read the sensordata.xml to do that we use the readXML() function this function takes no parameters and returns an object with every data parsed from the .xml file.
+
+ We then update the chart using the addData() function that we call every 1000 ms to add fresh data to the charts.
