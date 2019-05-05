@@ -89,13 +89,13 @@ def on_message(client, userdata, msg):
                     lights.text = new_light
                     # print("On ecrit dans le fichier")
 
-        tree.write(xml_file)
-        print("Nouveau fichier xml")
-
-        for child in root.iter('sensors'):
-            for sec in child.iter('salon'):
-                for element in sec.iter('extBrightness'):
-                    print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
+        # tree.write(xml_file)
+        # print("Nouveau fichier xml")
+        #
+        # for child in root.iter('sensors'):
+        #     for sec in child.iter('salon'):
+        #         for element in sec.iter('extBrightness'):
+        #             print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
 
 
     if msg.topic == "salon/window":
@@ -108,13 +108,13 @@ def on_message(client, userdata, msg):
                     wind.text = new_state
                     # print("On ecrit dans le fichier")
 
-        tree.write(xml_file)
-        print("Nouveau fichier xml")
-
-        for child in root.iter('sensors'):
-            for sec in child.iter('salon'):
-                for element in sec.iter('opencloseWindow'):
-                    print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
+        # tree.write(xml_file)
+        # print("Nouveau fichier xml")
+        #
+        # for child in root.iter('sensors'):
+        #     for sec in child.iter('salon'):
+        #         for element in sec.iter('opencloseWindow'):
+        #             print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
 
 
     if msg.topic == "salon/rain":
@@ -127,14 +127,15 @@ def on_message(client, userdata, msg):
                     pluie.text = new_pluie
                     # print("On ecrit dans le fichier")
 
-        tree.write(xml_file)
-        print("Nouveau fichier xml")
-
-        for child in root.iter('sensors'):
-            for sec in child.iter('salon'):
-                for element in sec.iter('rainDetect'):
-                    print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
-
+        # tree.write(xml_file)
+        # print("Nouveau fichier xml")
+        #
+        # for child in root.iter('sensors'):
+        #     for sec in child.iter('salon'):
+        #         for element in sec.iter('rainDetect'):
+        #             print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
+    tree.write(xml_file)
+    print("Nouveau fichier xml")
 
 client = mqtt.Client()
 print("Hello")
