@@ -13,7 +13,7 @@ You can use this project to display your own data from your Smart Building model
 After creating you repository and cloned the project you first need write the "config.ini" file. The file looks like this.
 >Image de config.ini
 
-Here you adapt the directory to the file name that you choose for example, the default directory is /html/pages/chambre.php, meaning that my .php is in my localhost in the 'html' file.
+After each variable you need to adapt every pages directory relative to your www file (for wamp or xamp). In this case the default value is /html/pages/chambre.php for example, meaning the projet is in www folder inside html subfolder
 
 After you have modified this the application should run.
 
