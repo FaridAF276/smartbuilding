@@ -24,7 +24,7 @@ function readXML(){
             graphHumidity : humidity,
             brightness : extBrightness,
             rain : rain,
-            tresholdTemp : tSeuil,
+            tresholdTemp : tSeuil, 
             tresholdHum : hSeuil,
             openCloseWindow : openCloseW
         };
