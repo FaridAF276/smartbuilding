@@ -100,10 +100,10 @@ try{
     function updateDoor(data){
         let doorBtn = document.getElementById('door');
         if (data.doorBool){
-            doorBtn.innerHTML="Porte ouverte";
+            doorBtn.textContent="Porte ouverte";
             doorBtn.className="btn btn-warning btn-lg";
         } else if(data.doorBool==0){
-            doorBtn.innerHTML="Porte fermée";
+            doorBtn.textContent="Porte fermée";
             doorBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Erreur dans l'acquisition des données..." + "\n" +
@@ -152,8 +152,8 @@ try{
     function initializeTemp(tresholdTemp, tresholdHum){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.innerHTML = tresholdTemp.toString();
-        tresholdTempDiv.innerHTML = tresholdHum.toString();
+        tresholdHumDiv.textContent = tresholdTemp.toString();
+        tresholdTempDiv.textContent = tresholdHum.toString();
     }
     var tresh =readXML();
     initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);

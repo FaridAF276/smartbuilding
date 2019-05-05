@@ -12,10 +12,10 @@ function readXML(){
         let parser = new DOMParser();
         let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
         let chambre = contenuXML.getElementsByTagName("chambre");
-        let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].innerHTML);
-        let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].innerHTML);
+        let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].textContent);
+        let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].textContent);
         let seuil = parseInt(chambre[0].getElementsByTagName("tempSeuil")[0].textContent);
-        let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].innerHTML);
+        let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
@@ -102,10 +102,10 @@ function updateDoor(data){
   let temoinPorte = document.getElementById("temoinPorte");
   console.log(temoinPorte);
   if (data.doorBool) {
-    temoinPorte.innerHTML = "Ouverte";
+    temoinPorte.textContent = "Ouverte";
     temoinPorte.className = "btn btn-success btn-lg";
   }else{
-    temoinPorte.innerHTML = "Fermée";
+    temoinPorte.textContent = "Fermée";
     temoinPorte.className = "btn btn-danger btn-lg";
   }
 }

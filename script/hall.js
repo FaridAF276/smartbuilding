@@ -101,10 +101,10 @@ try{
     function updateMail(data){
         let mailBtn = document.getElementById('mail');
         if (data.mail){
-            mailBtn.innerHTML="Il y a du courrier";
+            mailBtn.textContent="Il y a du courrier";
             mailBtn.className="btn btn-warning btn-lg";
         } else if(data.mail==0){
-            mailBtn.innerHTML="Boite au lettre vide";
+            mailBtn.textContent="Boite au lettre vide";
             mailBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Erreur dans l'acquisition des données...");
@@ -113,10 +113,10 @@ try{
     function updateDoor(data){
         let doorBtn = document.getElementById('door');
         if (data.doorBool){
-            doorBtn.innerHTML="Porte Ouverte";
+            doorBtn.textContentL="Porte Ouverte";
             doorBtn.className="btn btn-warning btn-lg";
         } else if(data.doorBool==0){
-            doorBtn.innerHTML="Porte fermée";
+            doorBtn.textContent="Porte fermée";
             doorBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Erreur dans l'acquisition des données...");
@@ -124,7 +124,7 @@ try{
     }
     function updatePeopleHall(data){
         let peopleInHall = document.getElementById('amountPeople');
-        peopleInHall.innerHTML = data.peopleInnHall.toString();
+        peopleInHall.textContent = data.peopleInnHall.toString();
     }
 
     function addData(data) {
@@ -154,13 +154,13 @@ try{
         updateMail(fichier);
         updateDoor(fichier);
         updatePeopleHall(fichier);
-        setTimeout(updateData,updateInterval);
+        setTimeout(updateData,updateInterval);i
     }
     function initializeTemp(tresholdTemp, tresholdHum){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.innerHTML = tresholdTemp.toString();
-        tresholdTempDiv.innerHTML = tresholdHum.toString();
+        tresholdHumDiv.textContent = tresholdTemp.toString();
+        tresholdTempDiv.textContent = tresholdHum.toString();
     }
     var tresh =readXML();
     initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);

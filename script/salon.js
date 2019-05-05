@@ -101,13 +101,13 @@ try{
         let brightnessBtn = document.getElementById('brightness');
         if(data.brightness.toLowerCase() == "rouge"){
             brightnessBtn.className="btn btn-danger btn-lg";
-            brightnessBtn.innerHTML = "Rouge";
+            brightnessBtn.textContent = "Rouge";
         }else if(data.brightness.toLowerCase() == "jaune"){
             brightnessBtn.className="btn btn-warning btn-lg";
-            brightnessBtn.innerHTML = "Jaune";
+            brightnessBtn.textContent = "Jaune";
         }else if (data.brightness.toLowerCase() == "blanc"){
             brightnessBtn.className="btn btn-light btn-lg";
-            brightnessBtn.innerHTML = "Blanc";
+            brightnessBtn.textContent = "Blanc";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
                 + "\n type : " + typeof data.brightness.toLowerCase());
@@ -117,10 +117,10 @@ try{
     function updateWindow(data){
         let windowBtn = document.getElementById('window');
         if (data.openCloseWindow){
-            windowBtn.innerHTML="Fenêtre Ouverte";
+            windowBtn.textContent="Fenêtre Ouverte";
             windowBtn.className="btn btn-warning btn-lg";
         } else if(data.openCloseWindow==0){
-            windowBtn.innerHTML="Fenêtre fermée";
+            windowBtn.textContent="Fenêtre fermée";
             windowBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.openCloseWindow
@@ -132,10 +132,10 @@ try{
     function updateRain(data){
         let rainBtn = document.getElementById('rain');
         if (data.rain){
-            rainBtn.innerHTML="Pluie détectée";
+            rainBtn.textContent="Pluie détectée";
             rainBtn.className="btn btn-warning btn-lg";
         } else if(data.rain==0){
-            rainBtn.innerHTML="Temps sec....";
+            rainBtn.textContent="Temps sec....";
             rainBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.rain
@@ -174,8 +174,8 @@ try{
     function initializeTemp(tresholdTemp, tresholdHum){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.innerHTML = tresholdTemp.toString();
-        tresholdTempDiv.innerHTML = tresholdHum.toString();
+        tresholdHumDiv.textContent = tresholdTemp.toString();
+        tresholdTempDiv.textContent = tresholdHum.toString();
     }
     var tresh =readXML();
     initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);

@@ -104,13 +104,13 @@ try{
         let brightnessBtn = document.getElementById('brightness');
         if(data.brightness.toLowerCase() == "rouge"){
             brightnessBtn.className="btn btn-danger btn-lg";
-            brightnessBtn.innerHTML = "Rouge";
+            brightnessBtn.textContent = "Rouge";
         }else if(data.brightness.toLowerCase() == "jaune"){
             brightnessBtn.className="btn btn-warning btn-lg";
-            brightnessBtn.innerHTML = "Jaune";
+            brightnessBtn.textContent = "Jaune";
         }else if (data.brightness.toLowerCase() == "blanc"){
             brightnessBtn.className="btn btn-light btn-lg";
-            brightnessBtn.innerHTML = "Blanc";
+            brightnessBtn.textContent = "Blanc";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
             + "\n type : " + typeof data.brightness.toLowerCase());
@@ -147,12 +147,12 @@ try{
     function initializeTemp(data){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.innerHTML = data.tresholdHum.toString();
-        tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+        tresholdHumDiv.textContent = data.tresholdHum.toString();
+        tresholdTempDiv.textContent = data.tresholdTemp.toString();
         let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
         let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
-        tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
-        tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+        tresholdHumDiv.textContent = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+        tresholdTempDiv.textContent = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
 
     }
     initializeTemp(readXML());

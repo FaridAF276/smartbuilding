@@ -25,6 +25,7 @@ This web application uses :
 * Bootstrap
 * Chart.js
 * jQuery
+
 You need these to be installed in your computer and adapt the script tags in every .php file of the project if you want to execute this application off-line. 
  
  ## How does the script work
@@ -32,3 +33,43 @@ You need these to be installed in your computer and adapt the script tags in eve
  To generate any of the chart or button we read the sensordata.xml to do that we use the readXML() function this function takes no parameters and returns an object with every data parsed from the .xml file.
 
  We then update the chart using the addData() function that we call every 1000 ms to add fresh data to the charts.
+
+```Javascript
+function readXML(){
+    let xmlData = new XMLHttpRequest();
+    try {
+        xmlData.open('GET', "../sensordata.xml",false);
+        xmlData.onload = function() {
+            if(this.status==200){
+                console.log("Status = " + this.status);
+            }
+        }
+        xmlData.send();
+        var xmlResponse = xmlData.responseText;
+        let parser = new DOMParser();
+        let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
+        let chambre = contenuXML.getElementsByTagName("chambre");
+        let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].innerHTML);
+        let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].innerHTML);
+        let seuil = parseInt(chambre[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].innerHTML);
+        var graphicData = {
+            graphTemperature : temperature,
+            graphHumidity : humidity,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
+            doorBool : door
+        };
+        return graphicData;
+    } catch (error) {
+        console.log("Erreur détectée : " + error.stack)
+    }
+}
+
+```
+
+As you can see the code returns the data parsed from sensordata.xml after parsing it through ```DOMParse()``` object.
+
+```readXML()``` parameters : none
+
+```readXML()``` return value : object containing parsed data from XML

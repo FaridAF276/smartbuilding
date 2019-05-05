@@ -96,10 +96,10 @@ try{
     function updateFlood(data){
         let floodBtn = document.getElementById('flood');
         if (data.floodDetection){
-            floodBtn.innerHTML="Innondation !";
+            floodBtn.textContent="Innondation !";
             floodBtn.className="btn btn-danger btn-lg";
         } else if(data.floodDetection==0){
-            floodBtn.innerHTML="Situation normale";
+            floodBtn.textContent="Situation normale";
             floodBtn.className = "btn btn-info btn-lg";
         }else{
             console.log("Erreur dans l'acquisition des données...");
@@ -135,12 +135,12 @@ try{
         function initializeTemp(data){
             let tresholdTempDiv = document.getElementById('tresholdTemp');
             let tresholdHumDiv = document.getElementById('tresholdHum');
-            tresholdHumDiv.innerHTML = data.tresholdHum.toString();
-            tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+            tresholdHumDiv.textContent = data.tresholdHum.toString();
+            tresholdTempDiv.textContent = data.tresholdTemp.toString();
             let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
             let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
-            tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
-            tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+            tresholdHumDiv.textContent = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+            tresholdTempDiv.textContent = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
 
         }
         initializeTemp(readXML());

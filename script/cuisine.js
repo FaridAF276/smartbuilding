@@ -99,10 +99,10 @@ try{
     function updatePresence(data){
         let presenceBtn = document.getElementById('presence');
         if (data.presence){
-            presenceBtn.innerHTML="Présence";
+            presenceBtn.textContent="Présence";
             presenceBtn.className="btn btn-warning btn-lg";
         } else if(data.presence==0){
-            presenceBtn.innerHTML="Aucune présence";
+            presenceBtn.textContent="Aucune présence";
             presenceBtn.className = "btn btn-success btn-lg";
         }else{
             console.log("Erreur dans l'acquisition des données...");
@@ -139,12 +139,12 @@ try{
     function initializeTemp(data){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.innerHTML = data.tresholdHum.toString();
-        tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+        tresholdHumDiv.textContent = data.tresholdHum.toString();
+        tresholdTempDiv.textContent = data.tresholdTemp.toString();
         let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
         let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
-        tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
-        tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+        tresholdHumDiv.textContent = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+        tresholdTempDiv.textContent = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
 
     }
     initializeTemp(readXML());
