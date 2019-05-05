@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -38,7 +38,7 @@ try{
     const updateInterval = 1000; //en milliseconde
     const maxPointInChart = 20;
     var updateCount = 0;
-    const numberElements = 15;
+    const numberElements = 10;
     let charTemp = document.getElementById('tempChart').getContext('2d');
     let charHumidity = document.getElementById('humidityChart').getContext('2d');
     var commonOptions = {
@@ -53,7 +53,10 @@ try{
             }],
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    stepSize : 0.25,
+                    gridLines : {
+                        display : true 
+                    }
                 }
             }]
         },
@@ -68,7 +71,7 @@ try{
         data : {
             datasets : [{
                 label : 'Test',
-                data : [1],
+                data : [],
                 pointBackgroundColor : 'green'
             }]
         },
@@ -85,7 +88,7 @@ try{
         data : {
             datasets : [{
                 label : 'Test',
-                data : [1],
+                data : [],
                 pointBackgroundColor : 'green'
             }]
         },

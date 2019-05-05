@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);

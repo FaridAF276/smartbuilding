@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b94bdd8-d4f8-4174-90a3-121f5b9b9002" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/chambre.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/chambre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cuisine.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cuisine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/garage.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/garage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hall.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/salon.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/salon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/chambre.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/chambre.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/cuisine.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/cuisine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/garage.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/garage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/gauge.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/gauge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/graphics.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/graphics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/hall.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/hall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/salon.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/salon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/sdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sdb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensordata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sensordata.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -278,7 +263,7 @@
       <workItem from="1556728447396" duration="342000" />
       <workItem from="1556728875802" duration="55000" />
       <workItem from="1556730081614" duration="3217000" />
-      <workItem from="1556733339622" duration="4006000" />
+      <workItem from="1556733339622" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="2e commit juste pour test">
       <created>1554990200612</created>
@@ -343,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556731767544</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ensemble des erreur solutionnées">
+      <created>1556738823012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556738823014</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30911000" />
+    <option name="totallyTimeSpent" value="31645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,7 +371,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
