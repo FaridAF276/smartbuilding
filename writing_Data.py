@@ -7,14 +7,22 @@ def on_connect(client, userdata, flags, rc):
     # Subscribing in on_connect() - if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe("chambre/potentiometre")
+
     client.subscribe("sdb/waterlevel")
     client.subscribe("sdb/humidity")
+
     client.subscribe("salon/light")
     client.subscribe("salon/window")
     client.subscribe("salon/rain")
+
     client.subscribe("garage/voiture")
     client.subscribe("garage/citerne")
     client.subscribe("garage/bigdoor")
+
+    client.subscribe("hall/courrier")
+    client.subscribe("hall/personnes")
+    client.subscribe("hall/jardin")
+
     client.subscribe("room/device")
 
 def on_message(client, userdata, msg):
@@ -164,6 +172,33 @@ def on_message(client, userdata, msg):
                 for bigdoor in sec.iter('openclosedoor'):
                     new_bigdoor = str(msg.payload)
                     bigdoor.text = new_bigdoor
+
+    if msg.topic == "hall/courrier":
+        print("Il y a du courrier ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('hall'):
+                for mail in sec.iter('mail'):
+                    new_mail = str(msg.payload)
+                    mail.text = new_mail
+
+    if msg.topic == "hall/personnes":
+        print("Il y a autant de personnes ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('hall'):
+                for people in sec.iter('peopleInHall'):
+                    new_people = str(msg.payload)
+                    people.text = new_people
+
+    if msg.topic == "hall/jardin":
+        print("Porte de jardin ouverte ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('hall'):
+                for gardendoor in sec.iter('openclosedoor'):
+                    new_gardendoor = str(msg.payload)
+                    gardendoor.text = new_gardendoor
 
     tree.write(xml_file)
     print("Nouveau fichier xml")
