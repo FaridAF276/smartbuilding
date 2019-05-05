@@ -14,7 +14,7 @@ function readXML(){
         let salon = contenuXML.getElementsByTagName("salon");
         let temp = parseFloat(salon[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(salon[0].getElementsByTagName("humidity")[0].textContent);
-        let extBrightness = salon[0].getElementsByTagName("extBrightness")[0].textContent.replace(/\s/g,'');
+        let extBrightness = parseInt(salon[0].getElementsByTagName("extBrightness")[0].textContent);
         let rain = parseInt(salon[0].getElementsByTagName("rainDetect")[0].textContent);
         let tSeuil = parseInt(salon[0].getElementsByTagName("tempSeuil")[0].textContent);
         let hSeuil = parseInt(salon[0].getElementsByTagName("humdSeuil")[0].textContent);
@@ -24,7 +24,7 @@ function readXML(){
             graphHumidity : humidity,
             brightness : extBrightness,
             rain : rain,
-            tresholdTemp : tSeuil,
+            tresholdTemp : tSeuil, 
             tresholdHum : hSeuil,
             openCloseWindow : openCloseW
         };
@@ -99,15 +99,12 @@ try{
 
     function updateBrightness (data){
         let brightnessBtn = document.getElementById('brightness');
-        if(data.brightness.toLowerCase() == "rouge"){
+        if(data.brightness){
             brightnessBtn.className="btn btn-danger btn-lg";
-            brightnessBtn.textContent = "Rouge";
-        }else if(data.brightness.toLowerCase() == "jaune"){
-            brightnessBtn.className="btn btn-warning btn-lg";
-            brightnessBtn.textContent = "Jaune";
-        }else if (data.brightness.toLowerCase() == "blanc"){
-            brightnessBtn.className="btn btn-light btn-lg";
-            brightnessBtn.textContent = "Blanc";
+            brightnessBtn.textContent = "Allumage des lampes";
+        }else if(!data.brightness){
+            brightnessBtn.className="btn btn-success btn-lg";
+            brightnessBtn.textContent = "Extinction";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
                 + "\n type : " + typeof data.brightness.toLowerCase());

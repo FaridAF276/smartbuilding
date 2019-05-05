@@ -19,8 +19,7 @@ function readXML(){
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
-            tresholdTemp : tSeuil,
-            tresholdHum : hSeuil,
+            tresholdTemp : seuil,
             doorBool : door
         };
         return graphicData;
