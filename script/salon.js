@@ -99,15 +99,12 @@ try{
 
     function updateBrightness (data){
         let brightnessBtn = document.getElementById('brightness');
-        if(data.brightness.toLowerCase() == "rouge"){
+        if(data.brightness){
             brightnessBtn.className="btn btn-danger btn-lg";
-            brightnessBtn.textContent = "Rouge";
-        }else if(data.brightness.toLowerCase() == "jaune"){
-            brightnessBtn.className="btn btn-warning btn-lg";
-            brightnessBtn.textContent = "Jaune";
-        }else if (data.brightness.toLowerCase() == "blanc"){
-            brightnessBtn.className="btn btn-light btn-lg";
-            brightnessBtn.textContent = "Blanc";
+            brightnessBtn.textContent = "Allumage des lampes";
+        }else if(!data.brightness){
+            brightnessBtn.className="btn btn-success btn-lg";
+            brightnessBtn.textContent = "Extinction";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
                 + "\n type : " + typeof data.brightness.toLowerCase());
