@@ -9,6 +9,8 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("chambre/potentiometre")
     client.subscribe("sdb/waterlevel")
     client.subscribe("sdb/humidity")
+    client.subscribe("salon/light")
+    client.subscribe("salon/window")
     client.subscribe("room/device")
 
 def on_message(client, userdata, msg):
