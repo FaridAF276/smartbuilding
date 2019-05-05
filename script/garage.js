@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -15,12 +15,16 @@ function readXML(){
         let temperature = parseFloat(garage[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(garage[0].getElementsByTagName("humidity")[0].textContent);
         let door = parseInt(garage[0].getElementsByTagName("openclosedoor")[0].textContent);
+        let tSeuil = parseInt(garage[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(garage[0].getElementsByTagName("humdSeuil")[0].textContent);
         let tank = parseInt(garage[0].getElementsByTagName("tank")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
             doorBool : door,
-            fuelTank : tank,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
+            fuelTank : tank
         };
         // console.log(temperature + "\n"+humidity + "\n"+door + "\n"+tank + "\n")
         return graphicData;
@@ -145,6 +149,14 @@ try{
         updateTank(fichier);
         setTimeout(updateData,updateInterval);
     }
+    function initializeTemp(tresholdTemp, tresholdHum){
+        let tresholdTempDiv = document.getElementById('tresholdTemp');
+        let tresholdHumDiv = document.getElementById('tresholdHum');
+        tresholdHumDiv.innerHTML = tresholdTemp.toString();
+        tresholdTempDiv.innerHTML = tresholdHum.toString();
+    }
+    var tresh =readXML();
+    initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);
     updateData();
 }
 catch (error) {

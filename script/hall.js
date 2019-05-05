@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -16,12 +16,16 @@ function readXML(){
         let humidity = parseFloat(hall[0].getElementsByTagName("humidity")[0].textContent);
         let peopleInHall = parseInt(hall[0].getElementsByTagName("peopleInHall")[0].textContent);
         let door = parseInt(hall[0].getElementsByTagName("openclosedoor")[0].textContent);
+        let tSeuil = parseInt(hall[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(hall[0].getElementsByTagName("humdSeuil")[0].textContent);
         let mail = parseInt(hall[0].getElementsByTagName("mail")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
             doorBool : door,
             peopleInnHall : peopleInHall,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             mail : mail
         };
         return graphicData;
@@ -152,6 +156,14 @@ try{
         updatePeopleHall(fichier);
         setTimeout(updateData,updateInterval);
     }
+    function initializeTemp(tresholdTemp, tresholdHum){
+        let tresholdTempDiv = document.getElementById('tresholdTemp');
+        let tresholdHumDiv = document.getElementById('tresholdHum');
+        tresholdHumDiv.innerHTML = tresholdTemp.toString();
+        tresholdTempDiv.innerHTML = tresholdHum.toString();
+    }
+    var tresh =readXML();
+    initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);
     updateData();
 }
 catch (error) {

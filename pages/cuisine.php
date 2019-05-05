@@ -29,7 +29,14 @@
         </div>
         <div class="row">
             <div class="col"><button class="btn btn-info" id="presence">Chargement...</button></div>
+            <div class="col">
+                <div id="tresholdTemp"></div>
+            </div>
+            <div class="col">
+                <div id="tresholdHum"></div>
+            </div>
         </div>
+
     </div>
     <script src = '../script/cuisine.js'></script>
 </body>

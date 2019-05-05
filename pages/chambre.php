@@ -20,6 +20,14 @@
     ?>
     <div class="container-fluid">
         <div class="row">
+        <h1>Les graphiques</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                Les graphiques ci-dessus proviennent des capteurs d'humidité et de température. La transmission des données de fait de la manière suivante : Les capteurs mesurent le température et l'humidité et les envoient au module "ESP32", ces données sont ensuite envoyé au boitier RaspBerry Pi qui les consignes dans un fichier (.xml) le site internet va donc lire ces données directement sur le fichier .xml
+            </div>
+        </div>
+        <div class="row">
             <div class ="col">
                 <canvas id="tempChart"></canvas>
             </div>
@@ -28,7 +36,21 @@
             </div>
         </div>
         <div class="row">
+            <div class="col"><h1>Les témoins</h1></div>
+        </div>
+        <div class="row">
+            <div class="col ">De la même manière que précédemment ce bouton indique la couleur des led de la maison en fonction de la luminosité </div>
+            <div class="col ">Ici nous indiquons à partir de quelle température de déclenchement d'effectuera</div>
+            <div class="col ">Ici nous indiquons à partir de quelle température de déclenchement d'effectuera</div>
+        </div>
+        <div class="row">
             <div class="col"><button class="btn btn-info" id="brightness">Chargement...</button></div>
+            <div class="col">
+                <div id="tresholdTemp" class ="alert alert-dismissible alert-primary"></div>
+            </div>
+            <div class="col">
+                <div id="tresholdHum" class = "alert alert-dismissible alert-primary"></div>
+            </div>
         </div>
     </div>
     <script src = '../script/chambre.js'></script>

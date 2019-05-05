@@ -9,7 +9,6 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("chambre/potentiometre")
     client.subscribe("sdb/waterlevel")
     client.subscribe("sdb/humidity")
-    client.subscribe("room/device")
 
 def on_message(client, userdata, msg):
     print("Message recu "+msg.topic+" "+str(msg.payload))

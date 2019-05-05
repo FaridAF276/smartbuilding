@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -14,10 +14,13 @@ function readXML(){
         let chambre = contenuXML.getElementsByTagName("chambre");
         let temperature = parseInt(chambre[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseInt(chambre[0].getElementsByTagName("humidity")[0].textContent);
+        let seuil = parseInt(chambre[0].getElementsByTagName("tempSeuil")[0].textContent);
         let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].textContent);
         var graphicData = {
             graphTemperature : temperature,
             graphHumidity : humidity,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             doorBool : door
         };
         return graphicData;

@@ -1,7 +1,7 @@
 function readXML(){
     let xmlData = new XMLHttpRequest();
     try {
-        xmlData.open('GET', "/sensordata.xml",false);
+        xmlData.open('GET', "../sensordata.xml",false);
         xmlData.onload = function() {
             if(this.status==200){
                 console.log("Status = " + this.status);
@@ -12,6 +12,8 @@ function readXML(){
         let parser = new DOMParser();
         let contenuXML= parser.parseFromString(xmlResponse,"text/xml");
         let chambre = contenuXML.getElementsByTagName("chambre");
+        let tSeuil = parseInt(chambre[0].getElementsByTagName("tempSeuil")[0].textContent);
+        let hSeuil = parseInt(chambre[0].getElementsByTagName("humdSeuil")[0].textContent);
         let temperature = parseFloat(chambre[0].getElementsByTagName("temperature")[0].textContent);
         let humidity = parseFloat(chambre[0].getElementsByTagName("humidity")[0].textContent);
         let door = parseInt(chambre[0].getElementsByTagName("openclosedoor")[0].textContent);
@@ -22,6 +24,8 @@ function readXML(){
             graphHumidity : humidity,
             doorBool : door,
             rain : rain,
+            tresholdTemp : tSeuil,
+            tresholdHum : hSeuil,
             brightness : brightnesstTxt
         };
         return graphicData;
@@ -34,7 +38,7 @@ try{
     const updateInterval = 1000; //en milliseconde
     const maxPointInChart = 20;
     var updateCount = 0;
-    const numberElements = 15;
+    const numberElements = 10;
     let charTemp = document.getElementById('tempChart').getContext('2d');
     let charHumidity = document.getElementById('humidityChart').getContext('2d');
     var commonOptions = {
@@ -49,7 +53,10 @@ try{
             }],
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    stepSize : 0.25,
+                    gridLines : {
+                        display : true 
+                    }
                 }
             }]
         },
@@ -64,7 +71,7 @@ try{
         data : {
             datasets : [{
                 label : 'Test',
-                data : [1],
+                data : [],
                 pointBackgroundColor : 'green'
             }]
         },
@@ -81,7 +88,7 @@ try{
         data : {
             datasets : [{
                 label : 'Test',
-                data : [1],
+                data : [],
                 pointBackgroundColor : 'green'
             }]
         },
@@ -137,6 +144,18 @@ try{
         updateBrightness(fichier);
         setTimeout(updateData,updateInterval);
     }
+    function initializeTemp(data){
+        let tresholdTempDiv = document.getElementById('tresholdTemp');
+        let tresholdHumDiv = document.getElementById('tresholdHum');
+        tresholdHumDiv.innerHTML = data.tresholdHum.toString();
+        tresholdTempDiv.innerHTML = data.tresholdTemp.toString();
+        let tempSeuilDeclenchement = data.graphTemperature + data.tresholdTemp;
+        let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
+        tresholdHumDiv.innerHTML = "Le déclenchement s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
+        tresholdTempDiv.innerHTML = "Le déclenchement s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
+
+    }
+    initializeTemp(readXML());
     updateData();
 }
 catch (error) {

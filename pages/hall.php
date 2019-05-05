@@ -33,6 +33,12 @@
                 <div id="amountPeople">Chargement...</div>
             </div>
             <div class="col"><button class="btn btn-info" id="mail">Chargement...</button></div>
+            <div class="col">
+                <div id="tresholdTemp"></div>
+            </div>
+            <div class="col">
+                <div id="tresholdHum"></div>
+            </div>
         </div>
     </div>
     <script src = '../script/hall.js'></script>
