@@ -12,6 +12,9 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("salon/light")
     client.subscribe("salon/window")
     client.subscribe("salon/rain")
+    client.subscribe("garage/voiture")
+    client.subscribe("garage/citerne")
+    client.subscribe("garage/bigdoor")
     client.subscribe("room/device")
 
 def on_message(client, userdata, msg):
@@ -134,6 +137,34 @@ def on_message(client, userdata, msg):
         #     for sec in child.iter('salon'):
         #         for element in sec.iter('rainDetect'):
         #             print("Dans le nouveau fichier xml " + element.tag + " : " + " : " + element.text)
+
+    if msg.topic == "garage/voiture":
+        print("La voiture est la ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('garage'):
+                for car in sec.iter('carDistance'):
+                    new_car = str(msg.payload)
+                    car.text = new_car
+
+    if msg.topic == "garage/citerne":
+        print("Detecter de l'eau dans la citerne ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('garage'):
+                for citerne in sec.iter('tank'):
+                    new_citerne = str(msg.payload)
+                    citerne.text = new_citerne
+
+    if msg.topic == "garage/bigdoor":
+        print("Porte de garage ouverte ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('garage'):
+                for bigdoor in sec.iter('openclosedoor'):
+                    new_bigdoor = str(msg.payload)
+                    bigdoor.text = new_bigdoor
+
     tree.write(xml_file)
     print("Nouveau fichier xml")
 
