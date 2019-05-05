@@ -39,6 +39,9 @@
             <div class="col">
                 <div id="tresholdHum"></div>
             </div>
+            <div class="col">
+                <button id="carPresence">Chargement...</button>
+            </div>
         </div>
     </div>
     <script src = '../script/garage.js'></script>
